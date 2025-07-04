@@ -1,0 +1,10 @@
+<div *ngIf="destino" style="text-align: center; padding: 20px;">
+  <h2>{{ destino.nombre }}</h2>
+  <img [src]="destino.imagen" alt="{{ destino.nombre }}" style="width: 90%; max-width: 600px; border-radius: 12px;">
+  <p style="margin: 16px 0;">{{ destino.descripcion }}</p>
+  <p><strong>Precio del viaje:</strong> ${{ destino.precio }}</p>
+
+  <button (click)="openDialog('10', '10')" style="padding: 10px 20px; background: green; color: white; border: none; border-radius: 6px; margin-top: 16px;">
+    Contar mi experiencia
+  </button>
+</div>

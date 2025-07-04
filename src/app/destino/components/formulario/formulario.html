@@ -1,0 +1,45 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+    <form [formGroup]="miFormulario" (submit)="contarExperiencia()">
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="nombre">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input matInput placeholder="Correo" formControlName="correo">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Destino</mat-label>
+                <input matInput placeholder="Destino" formControlName="destino" >
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Experiencia</mat-label>
+                <input matInput placeholder="Experiencia" formControlName="experiencia">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <button matButton="elevated">Basic</button>
+        </div>
+
+    </form>
+</div>
