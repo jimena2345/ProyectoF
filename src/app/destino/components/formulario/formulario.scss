@@ -1,0 +1,81 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dbeafe, #fef9c3);
+  padding: 20px;
+}
+
+form {
+  max-width: 420px;
+  width: 100%;
+  background: white;
+  padding: 32px;
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s ease;
+
+  mat-form-field {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  mat-label {
+    font-weight: 600;
+    color: #374151;
+  }
+
+  mat-error {
+    font-size: 13px;
+    color: #dc2626;
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  .botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+
+  button {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-size: 200% 100%;
+    background-position: left center;
+  }
+
+  button.mat-button {
+    background: linear-gradient(to right, #fb7185, #fda4af); // rosado coral
+    color: white;
+
+    &:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+  }
+
+  button.mat-raised-button {
+    background: linear-gradient(to right, #06b6d4, #67e8f9); // turquesa
+    color: white;
+
+    &:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+  }
+}
+}
