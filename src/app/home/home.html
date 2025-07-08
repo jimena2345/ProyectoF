@@ -1,28 +1,26 @@
-<div style="text-align: center; padding: 20px">
-  <h1 style="font-size: 2.5em; color: #2c3e50;">¡Bienvenido a ChiquiTourS!</h1>
-  <div style="width: 100%; display: flex; justify-content: center; align-items: center; ">
-    <img 
-      src="Chiqui tours.jpg" 
-      alt="Collage turístico Chiquinquirá"
-      style="height: 500px; width: 80%; border-radius: 16px; margin: 30px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.2);"
-    />
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ChiquiTourS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="mockup">
+    <div class="left-panel">
+         <img src="" alt="Logo Chiquinquirá Tours" class="logo">
+      <p>Descubre la magia de Chiquinquirá con nuestras rutas y experiencias únicas para ti y tu familia.</p>
+      <button onclick="location.href='/destinos'"> Explora nuestros destinos</button>
+    </div>
+    <div class="right-panel">
+      <img src="Chiqui tours.jpg" alt="Collage ChiquiTourS">
+    </div>
   </div>
-  <button 
-    routerLink="/destinos" 
-    style="
-      margin-top: 30px;
-      padding: 12px 24px;
-      background: linear-gradient(to right, #4CAF50, #2ecc71);
-      color: white;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    "
-    (mouseover)="this.style.transform='scale(1.05)'"
-    (mouseout)="this.style.transform='scale(1)'"
-  >
-    Entrar
-  </button>
-</div>
+</body>
+</html>
