@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
-import { Formulario } from './formulario';
+import { Formulario } from '../destino/components/formulario/formulario';
 
 describe('Formulario', () => {
   let service: Formulario;
