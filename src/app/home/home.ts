@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class Home {
   style: any;
+ mostrarFormulario = false;
 }

@@ -1,10 +1,9 @@
 .principal {
-  background-image: url("/fondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 20px; /* Opcional: para espacio interno */
+  padding: 20px; 
 }
 
 
@@ -15,31 +14,31 @@
   grid-template-areas:
     "top-left top-right"
     "dow-left bottom";
-  gap: 10px; /* Puedes ajustar el espacio entre las celdas */
+  gap: 10px; 
 }
 
 .top-left {
   grid-area: top-left;
   background-color: #f2f2f2;
 }
-
 .top-right {
   grid-area: top-right;
   background-color: #dcdcdc;
+  width: 400px;  
+  height: 300px;    
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .dow-left {
   grid-area: dow-left;
   display: grid;
   justify-content: center;
-  // background-color:rgb(243, 225, 225); 
   gap: 10px;
   
 }
-
-.bottom {
-  grid-area: bottom;
-  background-color: #b0b0b0;
-}
-
 

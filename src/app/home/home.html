@@ -17,10 +17,32 @@
          <img src="logo (1).jpg" alt="Logo Chiquinquirá Tours" class="logo">
       <p>Descubre la magia de Chiquinquirá con nuestras rutas y experiencias únicas para ti y tu familia.</p>
       <button onclick="location.href='/destinos'"> Explora nuestros destinos</button>
+      <div class="botones-container">
+
+  <button class="registro-btn" (click)="mostrarFormulario = true">Registrarse</button>
+  <form *ngIf="mostrarFormulario" class="register-form">
+    <h2>Registro</h2>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electronico" required>
+    <input type="password" placeholder="Contraseña" required>
+    <select required>
+      <option value="">Selecciona tu país</option>
+      <option value="co">Colombia</option>
+      <option value="mx">México</option>
+      <option value="es">España</option>
+    </select>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
     </div>
     <div class="right-panel">
       <img src="Chiqui tours.jpg" alt="Collage ChiquiTourS">
     </div>
   </div>
 </body>
+<div class="top-right">
+  <form class="register-form">
+  </form>
+</div>
+
 </html>

@@ -8,18 +8,20 @@ import { MaterialModule } from '../material/material.module';
 import { Formulario } from './components/formulario/formulario';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// import { DestinoColor } from './components/destino.color/destino.color';
+
 
 @NgModule({
   declarations: [
     Destino,
     DetalleDestino,
-    Formulario
+    Formulario,
   ],
   imports: [
     CommonModule,
     DestinoRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class DestinoModule { }

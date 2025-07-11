@@ -1,15 +1,15 @@
-
 <div class="principal">
   <div class="grid-container">
   <div class="top-left"><div *ngIf="destino" style="text-align: center; padding: 20px;">
   <h2>{{ destino.nombre }}</h2>
-  <img [src]="destino.imagen" alt="{{ destino.nombre }}" style="width: 90%; max-width: 600px; border-radius: 12px;">
+  <img [src]="destino.imagen" alt="{{ destino.nombre }}" style="width: 90%; max-width: 400px; border-radius: 12px;">
   
 </div></div>
   <div class="top-right"><p style="margin: 16px 0;">{{ destino.descripcion }}</p></div>
   <div class="dow-left">
-      <img src="logo (2).jpg" alt="Logo Chiquinquirá Tours" class="logo">
-    <H1>VIAJA CON NOSOTROS</H1>
+    <!-- <div class="logo" id="map" style="height: 400px;"></div> -->
+
+
   
   </div>
   <div class="bottom"><button (click)="openDialog('10', '10')" style="padding: 10px 20px; background: green; color: white; border: none; border-radius: 6px; margin-top: 16px;">
