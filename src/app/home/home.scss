@@ -15,7 +15,6 @@ body {
       align-items: center;
       overflow: hidden;
     }
-
     .mockup {
       width: 90%;
       max-width: 1100px;
@@ -27,7 +26,6 @@ body {
       overflow: hidden;
       position: relative;
     }
-
     .left-panel {
       width: 40%;
       background: #f8f9ff;
@@ -36,20 +34,17 @@ body {
       flex-direction: column;
       justify-content: center;
     }
-
     .left-panel h1 {
       font-size: 2.8em;
       color: #34495e;
       margin-bottom: 10px;
     }
-
     .left-panel p {
       font-size: 1em;
       color: #666;
       margin-bottom: 30px;
       line-height: 1.5;
     }
-
     .left-panel button {
       background: #9b59b6;
       color: white;
@@ -60,12 +55,9 @@ body {
       cursor: pointer;
       transition: background 0.3s;
     }
-
     .left-panel button:hover {
       background: #8e44ad;
-    }
-
-    
+    }  
     .right-panel {
       width: 60%;
       position: relative;
@@ -74,14 +66,11 @@ body {
       justify-content: center;
       align-items: center;
     }
-
     .right-panel img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
     }
-
-    
     .mockup::before {
       content: '';
       position: absolute;
@@ -92,7 +81,6 @@ body {
       background: #ecf0f1;
       border-bottom: 1px solid #ccc;
     }
-
     .mockup::after {
       content: '';
       position: absolute;
@@ -110,13 +98,11 @@ body {
         height: auto;
         margin: 20px;
       }
-
       .left-panel,
       .right-panel {
         width: 100%;
         height: 300px;
       }
-
       .left-panel {
         padding: 30px;
       }
@@ -124,39 +110,133 @@ body {
      .logo {
     margin: 0 auto 20px auto;
   }
-.botones-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 12px;
+  .right-panel {
+  flex: 1;
 }
-
-.explorar-btn,
-.registro-btn {
-  background-color: #9b59b6;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.right-panel img {
   width: 100%;
-  max-width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+.right-panel img {
+  width: 100%; 
+  height: auto;
 }
 
-.register-form input,
-.register-form select,
-.register-form button {
-  padding: 10px;
+
+.styled-form {
+  background-color: #ffffff;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px; 
+  max-width: 290px; 
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #6a4fdb;
+  margin-bottom: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px; 
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 13px;  
+  font-weight: bold;
+  color: #444;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px; 
+  margin-top: 4px; 
+  border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 13px;  
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  border-color: #6a4fdb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 79, 219, 0.5);
+}
+
+button {
+  width: 100%; 
+  padding: 8px 0;  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+  transition: all 0.3s ease-in-out;
+  margin-top: 8px;
+}
+
+.btn-clear {
+  background-color: #f2f2f2;
+  color: #555;
+}
+
+.btn-submit {
+  background-color: #6a4fdb;
+  color: white;
+}
+
+.btn-clear:hover {
+  background-color: #ddd;
+}
+
+.btn-submit:hover {
+  background-color: #5949b5;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;  
+  gap: 8px;  
+}
+
+
+.registro-btn {
+  background-color: #6a4fdb;
+  color: white;
+  padding: 10px 20px;  
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;  
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 8px;
+}
+
+.registro-btn:hover {
+  background-color: #5949b5;
+}
+
+button {
+  background-color: #6a4fdb; 
+  color: white; 
+  font-size: 16px; 
+  padding: 12px 25px; 
+  border: none; 
+  border-radius: 8px;
+  width: 100%; 
+  cursor: pointer; 
+  text-align: center; 
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out; 
+}
+button:hover {
+  background-color: #5949b5; 
+  transform: scale(1.05); 
+}
+button:active {
+  transform: scale(1); 
 }

@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss'
 })
 export class Home {
+irADestinos() {
+throw new Error('Method not implemented.');
+}
   style: any;
- mostrarFormulario = false;
+   mostrarFormulario = true;
 }

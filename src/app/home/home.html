@@ -12,37 +12,47 @@
   </style>
 </head>
 <body>
-  <div class="mockup">
+  <div class="mockup" *ngIf="mostrarFormulario">
     <div class="left-panel">
-         <img src="logo (1).jpg" alt="Logo Chiquinquirá Tours" class="logo">
+      <img src="logo (1).jpg" alt="Logo Chiquinquirá Tours" class="logo">
       <p>Descubre la magia de Chiquinquirá con nuestras rutas y experiencias únicas para ti y tu familia.</p>
       <button onclick="location.href='/destinos'"> Explora nuestros destinos</button>
-      <div class="botones-container">
-
-  <button class="registro-btn" (click)="mostrarFormulario = true">Registrarse</button>
-  <form *ngIf="mostrarFormulario" class="register-form">
-    <h2>Registro</h2>
-    <input type="text" placeholder="Nombre completo" required>
-    <input type="email" placeholder="Correo electronico" required>
-    <input type="password" placeholder="Contraseña" required>
-    <select required>
-      <option value="">Selecciona tu país</option>
-      <option value="co">Colombia</option>
-      <option value="mx">México</option>
-      <option value="es">España</option>
-    </select>
-    <button type="submit">Enviar</button>
-  </form>
-</div>
+      
+      <button class="registro-btn" (click)="mostrarFormulario = !mostrarFormulario">
+        Registrarse
+      </button>
     </div>
     <div class="right-panel">
       <img src="Chiqui tours.jpg" alt="Collage ChiquiTourS">
     </div>
   </div>
-</body>
-<div class="top-right">
-  <form class="register-form">
+  <form *ngIf="!mostrarFormulario"  class="styled-form">
+    <mat-icon (click)="mostrarFormulario = !mostrarFormulario" style="cursor: pointer;">undo</mat-icon>
+    <h2>Registro</h2>
+    <div class="input-group">
+      <label for="nombre">Nombre completo*</label>
+      <input id="nombre" type="text" placeholder="Tu nombre" required>
+    </div>
+    <div class="input-group">
+      <label for="email">Correo electrónico*</label>
+      <input id="email" type="email" placeholder="ejemplo@correo.com" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Contraseña*</label>
+      <input id="password" type="password" placeholder="Contraseña segura" required>
+    </div>
+    <div class="input-group">
+      <label for="pais">País*</label>
+      <select id="pais" required>
+        <option value="">Selecciona tu país</option>
+        <option value="co">Colombia</option>
+        <option value="mx">México</option>
+        <option value="es">España</option>
+      </select>
+    </div>
+    <div class="form-buttons">
+      <button type="reset" class="btn-clear">Limpiar</button>
+    </div>
   </form>
-</div>
-
+</body>
 </html>
