@@ -1,53 +1,60 @@
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <form [formGroup]="miFormulario" (submit)="contarExperiencia()">
+  <form [formGroup]="miFormulario" (submit)="contarExperiencia()">
 
-  <mat-form-field appearance="outline">
-    <mat-label>Nombre</mat-label>
-    <input matInput formControlName="nombre" placeholder="Tu nombre" />
-    <mat-error *ngIf="miFormulario.get('nombre')?.hasError('required')">
-      El nombre es obligatorio
-    </mat-error>
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" placeholder="Tu nombre" />
+      <mat-error *ngIf="miFormulario.get('nombre')?.hasError('required')">
+        El nombre es obligatorio
+      </mat-error>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Correo</mat-label>
-    <input matInput formControlName="correo" placeholder="Correo electrónico" />
-    <mat-error *ngIf="miFormulario.get('correo')?.hasError('required')">
-      El correo es obligatorio
-    </mat-error>
-    <mat-error *ngIf="miFormulario.get('correo')?.hasError('email')">
-      El correo no es válido
-    </mat-error>
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo" placeholder="Correo electrónico" />
+      <mat-error *ngIf="miFormulario.get('correo')?.hasError('required')">
+        El correo es obligatorio
+      </mat-error>
+      <mat-error *ngIf="miFormulario.get('correo')?.hasError('email')">
+        El correo no es válido
+      </mat-error>
+    </mat-form-field>
 
- <mat-form-field appearance="outline">
-  <mat-label>Destino turístico</mat-label>
-  <mat-select formControlName="destino">
-    <mat-option value="laguna">Basilica de Chiquinquira</mat-option>
-    <mat-option value="catedral">La Veranita</mat-option>
-    <mat-option value="museo">Pozo de la Virgen</mat-option>
-    <mat-option value="laguna">Mirador Los Currucuyes</mat-option>
-    <mat-option value="catedral">Mirador la Chucharita</mat-option>
-    <mat-option value="museo">Parque La Cabañita</mat-option>
-    <mat-option value="catedral">Palacio de la Cultura</mat-option>
-    <mat-option value="museo">Parque Julio Florez</mat-option>
-  </mat-select>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Destino turístico</mat-label>
+      <mat-select formControlName="destino">
+        <mat-option value="laguna">Basilica de Chiquinquira</mat-option>
+        <mat-option value="catedral">La Veranita</mat-option>
+        <mat-option value="museo">Pozo de la Virgen</mat-option>
+        <mat-option value="laguna">Mirador Los Currucuyes</mat-option>
+        <mat-option value="catedral">Mirador la Chucharita</mat-option>
+        <mat-option value="museo">Parque La Cabañita</mat-option>
+        <mat-option value="catedral">Palacio de la Cultura</mat-option>
+        <mat-option value="museo">Parque Julio Florez</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Experiencia</mat-label>
-    <textarea matInput formControlName="experiencia" placeholder="Describe tu experiencia"></textarea>
-    <mat-error *ngIf="miFormulario.get('experiencia')?.hasError('required')">
-      La experiencia es obligatoria
-    </mat-error>
-    <mat-error *ngIf="miFormulario.get('experiencia')?.hasError('minlength')">
-    </mat-error>
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Experiencia</mat-label>
+      <textarea matInput formControlName="experiencia" placeholder="Describe tu experiencia"></textarea>
+      <mat-error *ngIf="miFormulario.get('experiencia')?.hasError('required')">
+        La experiencia es obligatoria
+      </mat-error>
+      <mat-error *ngIf="miFormulario.get('experiencia')?.hasError('minlength')">
+        </mat-error>
+    </mat-form-field>
 
-  <div class="botones">
-  <button mat-button type="reset">Limpiar</button>
-  <button mat-raised-button type="submit">Enviar</button>
-</div>
+    <div class="file-upload-container">
+        <label for="fotoInput" class="file-upload-label">
+            <mat-icon>cloud_upload</mat-icon> Subir foto (opcional)
+        </label>
+        <input type="file" id="fotoInput" accept="image/*" (change)="onFileSelected($event)" style="display: none;">
+        <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
+        <span *ngIf="!selectedFile" class="text-gray-500">Ningún archivo seleccionado</span>
+    </div>
+    <div class="botones">
+      <button mat-button type="reset" (click)="resetForm()">Limpiar</button> <button mat-raised-button type="submit" [disabled]="miFormulario.invalid">Enviar</button>
+    </div>
 
-    </form>
+  </form>
 </div>
