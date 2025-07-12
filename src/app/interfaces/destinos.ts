@@ -4,5 +4,5 @@ export interface Destinos {
   descripcion: string;
   imagen: string;
   color?: string;
-  // precio: number;
+  valor: string;
 }
