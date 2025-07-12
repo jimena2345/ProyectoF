@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,33 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss'
 })
 export class Home {
-irADestinos() {
-throw new Error('Method not implemented.');
-}
+
+
+  formularioRegistrar: FormGroup;
+  
+  constructor(private formBuilder: FormBuilder){
+    this.formularioRegistrar = this.formBuilder.group({
+      nombre: [''],
+      correo: [''],
+      contrasena: [''],
+      pais: ['']
+    })
+  }
+
+
+  irADestinos() {
+  throw new Error('Method not implemented.');
+  }
   style: any;
-   mostrarFormulario = true;
+  mostrarFormulario = true;
+
+
+  resgistrar(){
+
+
+    console.log('click register', this.formularioRegistrar.value);
+    this.formularioRegistrar.reset();
+
+  }
+
 }

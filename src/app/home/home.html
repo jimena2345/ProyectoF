@@ -26,24 +26,24 @@
       <img src="Chiqui tours.jpg" alt="Collage ChiquiTourS">
     </div>
   </div>
-  <form *ngIf="!mostrarFormulario"  class="styled-form">
+  <form [formGroup]="formularioRegistrar" *ngIf="!mostrarFormulario"  class="styled-form" (submit)="resgistrar()">
     <mat-icon (click)="mostrarFormulario = !mostrarFormulario" style="cursor: pointer;">undo</mat-icon>
     <h2>Registro</h2>
     <div class="input-group">
       <label for="nombre">Nombre completo*</label>
-      <input id="nombre" type="text" placeholder="Tu nombre" required>
+      <input id="nombre" type="text" placeholder="Tu nombre" formControlName="nombre" required>
     </div>
     <div class="input-group">
       <label for="email">Correo electrónico*</label>
-      <input id="email" type="email" placeholder="ejemplo@correo.com" required>
+      <input id="email" type="email" placeholder="ejemplo@correo.com" formControlName="correo" required>
     </div>
     <div class="input-group">
       <label for="password">Contraseña*</label>
-      <input id="password" type="password" placeholder="Contraseña segura" required>
+      <input id="password" type="password" placeholder="Contraseña segura" formControlName="contrasena" required>
     </div>
     <div class="input-group">
       <label for="pais">País*</label>
-      <select id="pais" required>
+      <select id="pais" formControlName="pais" required>
         <option value="">Selecciona tu país</option>
         <option value="co">Colombia</option>
         <option value="mx">México</option>
@@ -51,7 +51,7 @@
       </select>
     </div>
     <div class="form-buttons">
-      <button type="reset" class="btn-clear">Limpiar</button>
+     <button type="submit" class="btn-enviar">Enviar</button>
     </div>
   </form>
 </body>
