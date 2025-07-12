@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing-module';
 import { Home } from './home';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,8 +17,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     HomeRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+
+  ],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+  
 })
 export class HomeModule {
 
