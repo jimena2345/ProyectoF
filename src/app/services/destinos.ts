@@ -22,6 +22,7 @@ export class DestinosService {
         'Zona natural rodeada de vegetación y agua cristalina, ideal para descansar y disfrutar en familia.',
       imagen: 'laveranita.jpg',
       color: '#60a5fa',
+      valor: '$150.000',
     },
     {
       id: 3,
@@ -30,6 +31,7 @@ export class DestinosService {
         'Sitio natural de gran valor espiritual, rodeado de leyendas y aguas cristalinas.',
       imagen: 'pozodelavirgen.jpg',
       color: '#34d399',
+      valor: '$150.000',
     },
     {
       id: 4,
@@ -38,6 +40,7 @@ export class DestinosService {
         'Punto panorámico con vistas espectaculares de Chiquinquirá y sus paisajes naturales.',
       imagen: 'loscurrucuyes.jpg',
       color: '#818cf8',
+      valor: '$150.000',
     },
     {
       id: 5,
@@ -46,6 +49,7 @@ export class DestinosService {
         'Mirador campestre con una vista tranquila, ideal para conectarse con la naturaleza.',
       imagen: 'lacucharita.jpg',
       color: '#f87171',
+      valor: '$150.000',
     },
     {
       id: 6,
@@ -54,6 +58,7 @@ export class DestinosService {
         'Espacio familiar con zonas verdes y juegos, perfecto para disfrutar al aire libre.',
       imagen: 'lacabañita.jpg',
       color: '#fbbf24',
+      valor: '$150.000',
     },
     {
       id: 7,
@@ -62,6 +67,7 @@ export class DestinosService {
         'Centro cultural que resalta el arte, la historia y las tradiciones de Chiquinquirá.',
       imagen: 'palaciodelacultura.jpg',
       color: '#a78bfa',
+      valor: '$150.000',
     },
     {
       id: 8,
@@ -70,6 +76,7 @@ export class DestinosService {
         'Espacio emblemático en honor al poeta Julio Flórez, ideal para el descanso y la contemplación.',
       imagen: 'julioflorez.jpg',
       color: '#38bdf8',
+      valor: '$150.000',
     },
   ];
 
