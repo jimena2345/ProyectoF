@@ -11,56 +11,65 @@ export class DestinosService {
     nombre: 'Basilica de Chiquinquira',
     descripcion: 'Lugar sagrado y emblemático, muy visitado por turistas y peregrinos',
     imagen: 'basilica.jpg',
-    color: '#cb6ce6'
+    color: '#cb6ce6',
+    valor: "$150.000"
   },
   {
     id: 2,
     nombre: 'La Veranita',
     descripcion: 'Zona natural rodeada de vegetación y agua cristalina, ideal para descansar y disfrutar en familia.',
     imagen: 'la veranita.jpg',
-    color: '#60a5fa'
+    color: '#60a5fa',
+    valor: "$50.000"
+    
   },
   {
     id: 3,
     nombre: 'Pozo de la Virgen',
     descripcion: 'Sitio natural de gran valor espiritual, rodeado de leyendas y aguas cristalinas.',
     imagen: 'pozo de la virgen.jpg',
-    color: '#34d399'
+    color: '#34d399',
+    valor: "$250.000"
   },
   {
     id: 4,
     nombre: 'Mirador Los Currucuyes',
     descripcion: 'Punto panorámico con vistas espectaculares de Chiquinquirá y sus paisajes naturales.',
     imagen: 'los currucuyes.jpg',
-    color: '#818cf8'
+    color: '#818cf8',
+    valor: "$350.000"
   },
   {
     id: 5,
     nombre: 'Mirador la Chucharita',
     descripcion: 'Mirador campestre con una vista tranquila, ideal para conectarse con la naturaleza.',
     imagen: 'la cucharita.jpg',
-    color: '#f87171'
+    color: '#f87171',
+    valor: "$450.000"
   },
   {
     id: 6,
     nombre: 'Parque La Cabañita',
     descripcion: 'Espacio familiar con zonas verdes y juegos, perfecto para disfrutar al aire libre.',
     imagen: 'la cabañita.jpg',
-    color: '#fbbf24'
+    color: '#fbbf24',
+    valor: "$500.000"
   },
   {
     id: 7,
     nombre: 'Palacio de la Cultura',
     descripcion: 'Centro cultural que resalta el arte, la historia y las tradiciones de Chiquinquirá.',
     imagen: 'palacio de la cultura.jpg',
-    color: '#a78bfa'
+    color: '#a78bfa',
+    valor: "$50.000"
   },
   {
     id: 8,
     nombre: 'Parque Julio Florez',
     descripcion: 'Espacio emblemático en honor al poeta Julio Flórez, ideal para el descanso y la contemplación.',
     imagen: 'julio florez.jpg',
-    color: '#38bdf8'
+    color: '#38bdf8',
+    valor: "$50.000"
   },
 ];
 

@@ -1,11 +1,74 @@
-
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; padding: 24px;">
-  <div *ngFor="let d of destinos" style="width: 300px; border: 1px solid #ccc; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img [src]="d.imagen" [alt]="d.nombre" style="width: 100%; height: 200px; object-fit: cover;">
-    <div style="padding: 12px;">
-      <h3 style="margin: 0;">{{ d.nombre }}</h3>
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+  "
+>
+  <div
+    *ngFor="let d of destinos"
+    style="
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    "
+  >
+    <img
+      [src]="d.imagen"
+      [alt]="d.nombre"
+      style="width: 100%; height: 200px; object-fit: cover"
+    />
+    <div style="padding: 12px">
+      <h3 style="margin: 15px">{{ d.nombre }}</h3>
       <p>{{ d.descripcion }}</p>
       <!-- <p><strong>Precio:</strong> ${{ d.precio }}</p> -->
-      <button (click)="verDetalle(d.id)" style="padding: 8px 16px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;">
+      <button
+        (click)="verDetalle(d.id)"
+        style="
+          padding: 8px 16px;
+          margin: 15px;
+          background: #3498db;
+          color: white;
+          border: 80px;
+          border-radius: 50px;
+          cursor: pointer;
+        "
+      >
         Ver más
-    
+      </button>
+      <button
+        (click)="verDetalle(d.id)"
+        style="
+          padding: 8px 16px;
+          background: #3498db;
+          color: white;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+        "
+      >
+        Añadir al carrito
+      </button>
+
+      <div style="display: flex; justify-content: center">
+        <button
+          (click)="verDetalle(d.id)"
+          style="
+            padding: 8px 16px;
+            background: #34db71;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+          "
+        >
+          {{ d.valor }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
