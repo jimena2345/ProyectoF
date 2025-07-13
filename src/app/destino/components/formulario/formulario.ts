@@ -14,7 +14,7 @@ export class Formulario {
   miFormulario: FormGroup;
   selectedFile: File | null = null; // ¡Esta propiedad es crucial!
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private experienciaService: FormularioService) {
     // Inicializa tu formulario en el constructor
     this.miFormulario = this.fb.group({
       nombre: ['', Validators.required],
@@ -26,11 +26,8 @@ export class Formulario {
     });
   }
 
-  ngOnInit(): void {
-    // Lógica de inicialización si la necesitas
-  }
 
-  // *** MÉTODO QUE FALTA: onFileSelected() ***
+  //  MÉTODO: SubirFoto
   onFileSelected(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
     let fileList: FileList | null = element.files;
@@ -46,6 +43,7 @@ export class Formulario {
   contarExperiencia(): void {
     if (this.miFormulario.valid) {
       const formData = new FormData();
+      // const datos = this.miFormulario.value;
 
       // Agrega los valores del formulario
       formData.append('nombre', this.miFormulario.get('nombre')?.value);
@@ -57,14 +55,8 @@ export class Formulario {
       if (this.selectedFile) {
         formData.append('foto', this.selectedFile, this.selectedFile.name);
       }
+      this.experienciaService.guardar(formData);
 
-      console.log("Datos del formulario (sin la foto para mostrar por consola):", this.miFormulario.value);
-      console.log("Archivo de foto seleccionado:", this.selectedFile);
-      alert('¡Experiencia enviada con éxito! (Simulado)');
-      this.resetForm(); // Llama a resetForm después de enviar
-    } else {
-      this.miFormulario.markAllAsTouched();
-      alert('Por favor, completa todos los campos requeridos correctamente.');
     }
   }
 
