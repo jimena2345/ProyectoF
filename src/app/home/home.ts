@@ -13,8 +13,9 @@ export class Home {
 
 
   formularioRegistrar: FormGroup;
+  
 
-  constructor(private formBuilder: FormBuilder, private registrarService: Registrar) {
+  constructor(private formBuilder: FormBuilder, private registrarService: Registrar,) {
     this.formularioRegistrar = this.formBuilder.group({
       nombreCompleto: [''],
       correo: [''],
@@ -35,6 +36,7 @@ export class Home {
     this.registrarService.registrar(this.formularioRegistrar.value);
     console.log('click register', this.formularioRegistrar.value);
     this.formularioRegistrar.reset();
+    this.mostrarFormulario = true;          // Oculta el formulario
   }
 
 }

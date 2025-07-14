@@ -7,6 +7,7 @@ import { DetalleDestino } from './components/detalle-destino/detalle-destino';
 import { MaterialModule } from '../material/material.module';
 import { Formulario } from './components/formulario/formulario';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Login } from './components/login/login';
 
 // import { DestinoColor } from './components/destino.color/destino.color';
 
@@ -16,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     Destino,
     DetalleDestino,
     Formulario,
+    Login
+    
+    
   ],
   imports: [
     CommonModule,

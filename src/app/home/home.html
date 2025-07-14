@@ -16,11 +16,9 @@
     <div class="left-panel">
       <img src="logo (1).jpg" alt="Logo Chiquinquirá Tours" class="logo">
       <p>Descubre la magia de Chiquinquirá con nuestras rutas y experiencias únicas para ti y tu familia.</p>
-      <button onclick="location.href='/destinos'"> Explora nuestros destinos</button>
-      
-      <button class="registro-btn" (click)="mostrarFormulario = !mostrarFormulario">
-        Registrarse
-      </button>
+      <button class="registro-btn" routerLink="/login"> Iniciar Sesión</button>
+
+      <button class="registro-btn" (click)="mostrarFormulario = !mostrarFormulario">Registrarse</button>
     </div>
     <div class="right-panel">
       <img src="Chiqui tours.jpg" alt="Collage ChiquiTourS">

@@ -24,6 +24,7 @@ import { MatSlideToggle } from '@angular/material/slide-toggle';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
+
 const MaterialComponents = [
   MatButtonModule,
   MatSliderModule,
