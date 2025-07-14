@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Login } from './destino/components/login/login';
+import { AuthGuard } from './auth/auth-guard';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'login', component: Login },
   {
     path: 'destinos',
-    loadChildren: () => import('./destino/destino-module').then(m => m.DestinoModule)
+    loadChildren: () => import('./destino/destino-module').then(m => m.DestinoModule),
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

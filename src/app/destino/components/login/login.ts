@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -25,8 +26,10 @@ export class Login {
 
     this.http.post('http://localhost:3000/user/login', { correo, contrasena }).subscribe({
       next: (res: any) => {
-        console.log('Usuario autenticado:', res.user);
-        this.router.navigate(['/destinos']);
+        console.log('Usuario autenticado:', res);
+        localStorage.setItem('token', res.access_token);
+
+        this.router.navigate([res.ruta || '/destinos'])
       },
       error: (err) => {
         console.warn('Falló el login:', err.error?.message || err.message);
@@ -34,7 +37,18 @@ export class Login {
       }
     });
   }
+//   this.http.get('http://localhost:3000/user/perfil', {
+//   headers: {
+//     Authorization: `Bearer ${Token}`
+//   }
+// }).subscribe(
+//   respuesta => console.log('Guard funciona 💪:', respuesta),
+//   error => console.error('Error 401: no tienes acceso 🤖')
+// );
+
 }
+
+
 }
 
       
