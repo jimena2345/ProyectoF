@@ -8,11 +8,13 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home-module').then(m => m.HomeModule)
   },
-  { path: 'login', component: Login },
+  { 
+    path: 'login', component: Login 
+  },
   {
+    canActivate: [AuthGuard],
     path: 'destinos',
     loadChildren: () => import('./destino/destino-module').then(m => m.DestinoModule),
-    canActivate: [AuthGuard]
   },
   {
     path: '**',
