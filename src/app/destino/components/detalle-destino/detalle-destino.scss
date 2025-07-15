@@ -5,8 +5,6 @@
   min-height: 100vh;
   padding: 20px; 
 }
-
-
 .grid-container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -43,9 +41,8 @@
 }
 
 .example-card {
-  max-width: 500px;
+  max-width: 400px;
 }
-
 .example-header-image {
   // background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
   background-size: cover;

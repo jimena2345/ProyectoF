@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div class="carrito">
+<div class="carrito" *ngIf="mostrarCarrito">
   <h3>🛒 Carrito de compras</h3>
 
   <p *ngIf="carrito.length === 0">No has agregado destinos.</p>
@@ -25,4 +25,5 @@
   </ul>
 
   <p *ngIf="carrito.length > 0"><b>Total:</b> ${{getTotal() | number:'1.0-0'}}</p>
+  <button *ngIf="carrito.length > 0" (click)="pagar()">Pagar</button>
 </div>

@@ -10,24 +10,16 @@ import { Router } from '@angular/router';
   styleUrl: './destino.scss'
 })
 export class Destino {
-[x: string]: any;
-
+mostrarCarrito: boolean = false;
   destinos: Destinos[] = [];
   carrito: Destinos[] = []; 
 
   constructor(private destinosService: DestinosService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.destinos = this.destinosService.getDestinos();
-  }
-
-  verDetalle(id: number) {
-    this.router.navigate(['/destinos/detalle', id]);
-  }
-
-  agregarAlCarrito(destino: Destinos) {
-    this.carrito.push(destino);
-  }
+agregarAlCarrito(destino: any) {
+  this.carrito.push(destino);
+  this['mostrarCarrito'] = true;
+}
 
   verCarrito() {
     console.log('Carrito:', this.carrito);
@@ -40,6 +32,14 @@ export class Destino {
   }
   getTotal(): number {
     return this.carrito.reduce((total, item) => total + item.precio, 0);
+  }
+  
+    ngOnInit(): void {
+    this.destinos = this.destinosService.getDestinos();
+  }
+
+  verDetalle(id: number) {
+    this.router.navigate(['/destinos/detalle', id]);
   }
 
 }
