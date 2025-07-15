@@ -12,22 +12,20 @@ import { FormularioService } from '../../../services/formulario';
 export class Formulario {
 
   miFormulario: FormGroup;
-  selectedFile: File | null = null; // ¡Esta propiedad es crucial!
+  selectedFile: File | null = null; 
 
   constructor(private fb: FormBuilder, private experienciaService: FormularioService) {
-    // Inicializa tu formulario en el constructor
+   
     this.miFormulario = this.fb.group({
       nombre: ['', Validators.required],
       correo: ['', [Validators.required, Validators.email]],
       destino: ['', Validators.required],
       experiencia: ['', [Validators.required, Validators.minLength(20)]],
-      // Si por alguna razón agregaste 'foto' aquí, quítalo si vas a usar `selectedFile` por separado
-      // foto: [''] // No es necesario si manejas el archivo como `selectedFile`
     });
   }
 
 
-  //  MÉTODO: SubirFoto
+ 
   onFileSelected(event: Event): void {
     const element = event.currentTarget as HTMLInputElement;
     let fileList: FileList | null = element.files;
@@ -39,19 +37,19 @@ export class Formulario {
     }
   }
 
-  // Tu método contarExperiencia()
+  
   contarExperiencia(): void {
     if (this.miFormulario.valid) {
       const formData = new FormData();
       // const datos = this.miFormulario.value;
 
-      // Agrega los valores del formulario
+     
       formData.append('nombre', this.miFormulario.get('nombre')?.value);
       formData.append('correo', this.miFormulario.get('correo')?.value);
       formData.append('destino', this.miFormulario.get('destino')?.value);
       formData.append('experiencia', this.miFormulario.get('experiencia')?.value);
 
-      // Si hay una foto seleccionada, la agregamos al FormData
+      
       if (this.selectedFile) {
         formData.append('foto', this.selectedFile, this.selectedFile.name);
       }
